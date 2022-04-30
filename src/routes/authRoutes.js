@@ -49,7 +49,7 @@ router.post(
                     return next(err);
                 }
             }
-        )(req, res, next);
+        )(req, res, next)
     }
 );
 
