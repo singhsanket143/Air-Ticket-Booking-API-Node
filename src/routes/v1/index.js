@@ -19,7 +19,7 @@ router.delete("/flight", flightController.destroyFlight);
 
 
 router.post("/review", reviewController.createReview);
-router.get("/review/:flightId/:userId", reviewController.getReview);
 router.get("/review/:flightId", reviewController.getAllReviews);
+router.get("/review/:flightId/:userId", reviewController.getReview);
 router.delete("/review/:flightId", reviewController.destroyReview);
 module.exports = router;
