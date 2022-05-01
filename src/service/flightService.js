@@ -6,7 +6,6 @@ const createFlight = async (data) => {
             departureAirport: data.departureAirport,
             arrivalAirport: data.arrivalAirport,
             duration: data.duration,
-            flightDate: data.flightDate,
             departureTime: data.departureTime,
             arrivalTime: data.arrivalTime,
             flightNumber: data.flightNumber,
@@ -20,7 +19,7 @@ const createFlight = async (data) => {
     }
 }
 
-const updateFlight = (data) => {
+const updateFlight = async (data) => {
     try {
         const response = await Flight.updateOne({flightNumber: data.flightNumber}, data);
         return response;
