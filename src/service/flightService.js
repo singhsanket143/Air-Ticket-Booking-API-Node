@@ -38,7 +38,7 @@ const destroyFlight = async (flightNumber) => {
     }
 }
 
-const getFlight = (flightNumber) => {
+const getFlight = async (flightNumber) => {
     try {
         const response = await Flight.findOne({flightNumber: flightNumber});
         return response;
@@ -47,7 +47,7 @@ const getFlight = (flightNumber) => {
     }
 }   
 
-const getAllFlights = () => {
+const getAllFlights = async () => {
     try {
         const response = await Flight.find();;
         return response;

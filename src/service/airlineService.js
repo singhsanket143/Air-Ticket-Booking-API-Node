@@ -15,13 +15,14 @@ const createAirline = async (data) => {
 const destroyAirline = async (name) => {
     try {
         const response = await Airline.findOneAndDelete({name: name});
+        console.log(response)
         return response;
     } catch(err) {
         console.log(err);
     }
 }
 
-const getAirline = (name) => {
+const getAirline = async (name) => {
     try {
         const response = await Airline.findOne({name: name});
         return response;
@@ -30,7 +31,7 @@ const getAirline = (name) => {
     }
 }   
 
-const getAllAirlines = () => {
+const getAllAirlines = async () => {
     try {
         const response = await Airline.find();;
         return response;
